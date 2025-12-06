@@ -23,9 +23,9 @@ export default function TopNav() {
   return (
     <div className="w-full shadow sticky top-0 z-50">
 
-      {/* -------------------------------- */}
-      {/* 🔵 TOP BAR */}
-      {/* -------------------------------- */}
+     
+      {/* TOP BAR */}
+    
       <div className="bg-brand-dark text-white px-4 md:px-8 py-3 flex items-center justify-between">
 
         {/* LOGO */}
@@ -49,20 +49,20 @@ export default function TopNav() {
           <RxExit className="hover:text-brand-light transition" />
         </div>
 
-        {/* HAMBURGER (Mobile) */}
+        {/* HAMBURGER */}
         <div className="md:hidden text-3xl cursor-pointer" onClick={() => setOpen(!open)}>
           {open ? <IoMdClose /> : <GiHamburgerMenu />}
         </div>
       </div>
 
-      {/* -------------------------------- */}
-      {/* 🔵 NAV TABS (Desktop + Tablet) */}
-      {/* -------------------------------- */}
+     
+      {/* NAV TABS*/}
+    
       <div className="bg-brand-mid overflow-x-auto hidden md:block">
         <div className="flex justify-center min-w-max">
 
           <div
-            onClick={() => navigate("/s1")}
+            onClick={() => navigate("/")}
             className={`${tabBase} ${isActive("/s1")}`}
           >
             <FaWpforms className="text-xl md:text-2xl" /> My Filing
@@ -76,7 +76,7 @@ export default function TopNav() {
           </div>
 
           <div
-            onClick={() => navigate("/add-filing")}
+            
             className={`${tabBase} hover:bg-[#176f8a95]`}
           >
             <FaFileWaveform className="text-xl md:text-2xl" /> Add Filing
@@ -84,9 +84,9 @@ export default function TopNav() {
         </div>
       </div>
 
-      {/* -------------------------------- */}
-      {/* 🔵 COLLAPSIBLE MOBILE MENU */}
-      {/* -------------------------------- */}
+     
+      {/* COLLAPSIBLE MOBILE MENU */}
+    
       <div
         className={`md:hidden bg-brand-mid text-white flex flex-col overflow-hidden transition-all duration-300 ${
           open ? "max-h-96" : "max-h-0"
