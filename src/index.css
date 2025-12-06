@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-dark: #184b5e;
+    --brand-mid: #196981;
+    --brand-bg: #F4F7F8;
+  }
+}
+
+/* Use custom variables to create tailwind color classes */
+@theme {
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-mid: var(--brand-mid);
+  --color-brand-bg: var(--brand-bg);
+}
+
+body {
+  background-color: var(--brand-bg);
+}
+.tab-underline {
+  position: relative;
+}
+
+.tab-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 7px;
+  background: white;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.tab-underline-active::after {
+  width: 100%;
+}
+
+
+label {
+  @apply text-brand-mid font-medium;
+}
+
+select, input {
+  @apply text-brand-mid;
+}
